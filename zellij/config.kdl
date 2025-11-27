@@ -1,1 +1,86 @@
 theme "tokyo-night"
+session_serialization true
+pane_viewport_serialization false
+serialization_interval 5        
+
+keybinds {
+    // Фикс: отключаем дефолтные resize/search/scroll
+    unbind "Ctrl r" "?" "Ctrl f" "Ctrl s" "Ctrl n"
+
+    shared_except "locked" {
+        // === УПРАВЛЕНИЕ ТАБАМИ ===
+        bind "Alt Left" { GoToPreviousTab; }
+        bind "Alt Right" { GoToNextTab; }
+        bind "Alt t" { NewTab; }
+        bind "Alt w" { CloseTab; }
+        bind "Alt 1" { GoToTab 1; }
+        bind "Alt 2" { GoToTab 2; }
+        bind "Alt 3" { GoToTab 3; }
+        bind "Alt 4" { GoToTab 4; }
+        bind "Alt 5" { GoToTab 5; }
+       
+        // === SMART-SPLITS: НАВИГАЦИЯ МЕЖДУ ПАНЕЛЯМИ ===
+        bind "Ctrl h" {
+            MessagePlugin "file:~/.config/zellij/plugins/vim-zellij-navigator.wasm" {
+                name "move_focus";
+                payload "left";
+            };
+        }
+        bind "Ctrl j" {
+            MessagePlugin "file:~/.config/zellij/plugins/vim-zellij-navigator.wasm" {
+                name "move_focus";
+                payload "down";
+            };
+        }
+        bind "Ctrl k" {
+            MessagePlugin "file:~/.config/zellij/plugins/vim-zellij-navigator.wasm" {
+                name "move_focus";
+                payload "up";
+            };
+        }
+        bind "Ctrl l" {
+            MessagePlugin "file:~/.config/zellij/plugins/vim-zellij-navigator.wasm" {
+                name "move_focus";
+                payload "right";
+            };
+        }
+       
+        // === SMART-SPLITS: РЕСАЙЗ ПАНЕЛЕЙ ===
+        bind "Alt h" {
+            MessagePlugin "file:~/.config/zellij/plugins/vim-zellij-navigator.wasm" {
+                name "resize";
+                payload "left";
+            };
+        }
+        bind "Alt j" {
+            MessagePlugin "file:~/.config/zellij/plugins/vim-zellij-navigator.wasm" {
+                name "resize";
+                payload "down";
+            };
+        }
+        bind "Alt k" {
+            MessagePlugin "file:~/.config/zellij/plugins/vim-zellij-navigator.wasm" {
+                name "resize";
+                payload "up";
+            };
+        }
+        bind "Alt l" {
+            MessagePlugin "file:~/.config/zellij/plugins/vim-zellij-navigator.wasm" {
+                name "resize";
+                payload "right";
+            };
+        }
+       
+        // === ОСНОВНЫЕ ОПЕРАЦИИ ===
+        bind "Alt r" { SwitchToMode "RenameTab"; }
+        bind "Ctrl q" { Quit; }
+       
+        // Скроллинг
+        // bind "Ctrl u" { ScrollToTop; }
+        // bind "Ctrl d" { ScrollToBottom; }
+        bind "PageUp" { PageScrollUp; }
+        bind "PageDown" { PageScrollDown; }
+    }
+}
+
+pane_frames false
