@@ -5,14 +5,17 @@ zstyle :omz:plugins:ssh-agent quiet yes
 
 plugins=(
   git
-  zsh-autosuggestions
-  zsh-syntax-highlighting
+  git-extras
+  zsh-vi-mode
   extract
   sudo
   z
   cp
+  docker
+  docker-compose
   ssh-agent
-  zsh-vi-mode
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
