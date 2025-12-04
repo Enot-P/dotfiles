@@ -30,3 +30,9 @@ alias lt='eza -T --level=3 --icons --git-ignore'
 alias ls='eza --icons'
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/enot/.dart-cli-completion/zsh-config.zsh ]] && . /home/enot/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
