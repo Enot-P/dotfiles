@@ -6,3 +6,5 @@ export GEMINI_API_KEY="AIzaSyCt10vwQD2domYS3e-Hjxmjq83H4iOSpjs"
 # . "$HOME/.cargo/env"
 export PATH=$PATH:~/go/bin
 export GEMINI_API_KEY="AIzaSyAniv6Y3rfyL0X0rqbn7Q1BjwexsDgV72U"
+export ZSH="$HOME/.oh-my-zsh"
+export EDITOR="nvim"
