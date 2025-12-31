@@ -19,7 +19,7 @@ zstyle :omz:plugins:ssh-agent quiet yes
 plugins=(
   git
   git-extras
-  zsh-vi-mode
+  # zsh-vi-mode
   extract
   sudo
   z
