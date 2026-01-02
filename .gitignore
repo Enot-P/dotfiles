@@ -1,0 +1,24 @@
+# Временные файлы и кэши, которые точно не нужны
+*~
+*.swp
+*.tmp
+.DS_Store
+.Thumbs.db
+
+# Для Neovim — обычно не коммитим lock-файлы и плагины
+nvim/lazy-lock.json
+nvim/after/plugin/  # если там генерируемые файлы
+nvim/lua/plugins/**/README.md  # если не хотите чужие README
+
+# Tmux Plugin Manager — сам tpm и плагины обычно не коммитим (они клонируются при установке)
+tmux/plugins/tpm/
+
+# Node.js — если package-lock.json попал случайно и не нужен
+package-lock.json
+
+
+# Не отслеживать личный .zshenv
+zsh/.zshenv
+
+# Не отслеживать личный .zshenv
+zsh/.zshenv
