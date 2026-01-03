@@ -42,6 +42,7 @@ alias la='eza -lha --git --icons'
 alias lt='eza -T --level=3 --icons --git-ignore'
 alias ls='eza --icons'
 alias v='nvim'
+alias leet='nvim leetcode.nvim' # Зпускает leetcode плагин в nvim
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
