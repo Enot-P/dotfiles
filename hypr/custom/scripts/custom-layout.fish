@@ -10,6 +10,9 @@ set SOCKET "unix:/tmp/mykitty"
 hyprctl dispatch exec "kitty --listen-on $SOCKET --title 'EditorWindow'"
 sleep 0.2
 
+# 8. Выполнение комманд в терминале
+kitty-control -s /tmp/mykitty -c "send-text nvim\r" 
+
 # 3. Запускаем второй терминал
 hyprctl dispatch exec kitty
 sleep 0.2
@@ -17,6 +20,13 @@ sleep 0.2
 # 4. Настраиваем пропорции
 hyprctl dispatch splitratio 0.594
 sleep 0.3
+
+
+sleep 0.3
+# 7. ЗАПУСК ЭМУЛЯТОРА
+# Теперь это сработает, так как скрипт исполняется в fish
+# hyprctl dispatch exec "env QT_QPA_PLATFORM=xcb flutter emulators --launch Medium_Phone > /tmp/flutter_log.txt 2>&1"
+hyprctl dispatch exec "env QT_QPA_PLATFORM=xcb waydroid > /tmp/waydroid_log.txt 2>&1"
 
 
 #5.1 Запускаем терминал
@@ -66,11 +76,3 @@ sleep 0.25
 hyprctl dispatch movefocus u
 # sleep 0.5
 hyprctl dispatch splitratio +0.57
-sleep 0.3
-# 7. ЗАПУСК ЭМУЛЯТОРА
-# Теперь это сработает, так как скрипт исполняется в fish
-# hyprctl dispatch exec "env QT_QPA_PLATFORM=xcb flutter emulators --launch Medium_Phone > /tmp/flutter_log.txt 2>&1"
-# hyprctl dispatch exec "env QT_QPA_PLATFORM=xcb waydroid > /tmp/waydroid_log.txt 2>&1"
-
-# 8. Выполнение комманд в терминале
-kitty-control -s /tmp/mykitty -c "send-text nvim\r" 
