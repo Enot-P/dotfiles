@@ -16,9 +16,6 @@ tmux/plugins/tpm/
 # Node.js — если package-lock.json попал случайно и не нужен
 package-lock.json
 
-
 # Не отслеживать личный .zshenv
 zsh/.zshenv
-
-# Не отслеживать личный .zshenv
-zsh/.zshenv
+fish/conf.d/env.fish
