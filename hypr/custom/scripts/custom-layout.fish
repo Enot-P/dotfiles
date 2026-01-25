@@ -71,3 +71,6 @@ sleep 0.3
 # Теперь это сработает, так как скрипт исполняется в fish
 # hyprctl dispatch exec "env QT_QPA_PLATFORM=xcb flutter emulators --launch Medium_Phone > /tmp/flutter_log.txt 2>&1"
 # hyprctl dispatch exec "env QT_QPA_PLATFORM=xcb waydroid > /tmp/waydroid_log.txt 2>&1"
+
+# 8. Выполнение комманд в терминале
+kitty-control -s /tmp/mykitty -c "send-text nvim\r" 
