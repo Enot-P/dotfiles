@@ -15,10 +15,15 @@ hyprctl dispatch exec kitty
 sleep 0.2
 
 # 4. Настраиваем пропорции
-hyprctl dispatch splitratio 0.544
+hyprctl dispatch splitratio 0.594
 sleep 0.3
 
-# 5. Запускаем видео
+
+#5.1 Запускаем терминал
+# hyprctl dispatch exec kitty
+# sleep 0.3
+
+# 5.2 Запускаем видео
 set VIDEO_URL "https://www.youtube.com/watch?v=qk8ZnWirWD8"
 set WINDOW_TITLE "PiP Video"
 
@@ -60,7 +65,7 @@ sleep 0.25
 # 6. Манипуляции с фокусом
 hyprctl dispatch movefocus u
 # sleep 0.5
-hyprctl dispatch splitratio +0.65
+hyprctl dispatch splitratio +0.57
 sleep 0.3
 # 7. ЗАПУСК ЭМУЛЯТОРА
 # Теперь это сработает, так как скрипт исполняется в fish
