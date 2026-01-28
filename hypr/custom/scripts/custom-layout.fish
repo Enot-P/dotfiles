@@ -23,6 +23,8 @@ end
 
 # 3. Запуск nvim
 hyprctl dispatch focuswindow class:editor_kitty
+kitty-control -s $SOCKET -c "send-text tmux\r" 
+sleep 0.2
 kitty-control -s $SOCKET -c "send-text nvim\r" 
 sleep 0.2
 
@@ -44,6 +46,7 @@ sleep 0.2
 
 # 6. ЗАПУСК WAYDROID
 hyprctl dispatch exec "env QT_QPA_PLATFORM=xcb waydroid > /tmp/waydroid_log.txt 2>&1"
+# hyprctl dispatch exec "env QT_QPA_PLATFORM=xcb flutter emulators --launch Small_Phone > /tmp/emulators_log.txt 2>&1"
 
 # 7. ЗАПУСК ВИДЕО ЧЕРЕЗ АДРЕС ОКНА
 # Мы берем адрес side_kitty и говорим: "Сделай сплит вниз ТУТ"
