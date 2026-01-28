@@ -19,3 +19,12 @@ package-lock.json
 # Не отслеживать личный .zshenv
 zsh/.zshenv
 fish/conf.d/env.fish
+**/env
+!**/env/
+.env
+env
+.env.local
+.env.development
+.env.production
+.env.*
+**/env.conf
